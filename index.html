@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Still Human</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="app-shell">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="signal-field" aria-hidden="true">
+          <div class="node node-a"></div>
+          <div class="node node-b"></div>
+          <div class="node node-c"></div>
+          <div class="thought-line line-a"></div>
+          <div class="thought-line line-b"></div>
+          <div class="thought-line line-c"></div>
+          <div class="pulse-grid"></div>
+        </div>
+
+        <nav class="topbar" aria-label="Main navigation">
+          <a class="brand" href="#top" aria-label="Still Human home">
+            <span class="brand-mark">SH</span>
+            <span>Still Human</span>
+          </a>
+          <div class="nav-links">
+            <a href="#lab">Think Lab</a>
+            <a href="#proof">Proof</a>
+            <a href="#pledge">Pledge</a>
+          </div>
+        </nav>
+
+        <div class="hero-content" id="top">
+          <div class="hero-copy">
+            <p class="eyebrow">An interactive confidence engine for the AI era</p>
+            <h1 id="page-title">AI can think fast. Humans decide what matters.</h1>
+            <p class="lede">
+              This site lets a machine draft an answer, then shows where people still lead:
+              judgment, taste, context, responsibility, courage, and care.
+            </p>
+            <div class="hero-actions">
+              <a class="primary-action" href="#lab">Run the human test</a>
+              <a class="secondary-action" href="#proof">Why humans are required</a>
+            </div>
+          </div>
+
+          <div class="thinking-console" role="img" aria-label="Animated AI thinking console">
+            <div class="console-toolbar">
+              <span></span>
+              <span></span>
+              <span></span>
+              <strong>ai_thinking.log</strong>
+            </div>
+            <div class="console-stream">
+              <p><span>model:</span> pattern detected</p>
+              <p><span>confidence:</span> 87%</p>
+              <p><span>missing:</span> lived context</p>
+              <p><span>missing:</span> ethical ownership</p>
+              <p><span>next:</span> ask a human</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="lab-section" id="lab" aria-labelledby="lab-title">
+        <div class="section-heading">
+          <p class="eyebrow">Think Lab</p>
+          <h2 id="lab-title">Give AI a problem. Then add the part only you know.</h2>
+          <p>
+            The generator below imitates an AI response. Your job is to improve it with context,
+            consequences, and human judgment.
+          </p>
+        </div>
+
+        <div class="lab-grid">
+          <form class="prompt-panel" id="prompt-form">
+            <label for="challenge">What are you trying to solve?</label>
+            <textarea
+              id="challenge"
+              name="challenge"
+              rows="6"
+              placeholder="Example: I need to decide whether to automate customer support, but I do not want customers to feel abandoned."
+            ></textarea>
+            <button type="submit">Generate AI draft</button>
+          </form>
+
+          <article class="response-panel" aria-live="polite">
+            <div class="response-header">
+              <span>Generated draft</span>
+              <button class="icon-button" id="refresh-draft" type="button" aria-label="Refresh draft" title="Refresh draft">
+                ↻
+              </button>
+            </div>
+            <p id="ai-output">
+              AI will produce a tidy answer here. It will be useful, but incomplete until a person
+              adds intent, tradeoffs, and ownership.
+            </p>
+          </article>
+        </div>
+
+        <div class="human-layer">
+          <div>
+            <p class="eyebrow">Human layer</p>
+            <h3>What the model cannot carry for you</h3>
+          </div>
+          <div class="layer-list">
+            <button data-layer="context" type="button">Context</button>
+            <button data-layer="taste" type="button">Taste</button>
+            <button data-layer="stakes" type="button">Stakes</button>
+            <button data-layer="trust" type="button">Trust</button>
+          </div>
+          <p id="layer-output">
+            Select a layer to see why your thinking still changes the answer.
+          </p>
+        </div>
+      </section>
+
+      <section class="proof-section" id="proof" aria-labelledby="proof-title">
+        <div class="section-heading compact">
+          <p class="eyebrow">Why It Matters</p>
+          <h2 id="proof-title">Developers are not disappearing. The job is moving up the stack.</h2>
+        </div>
+
+        <div class="proof-grid">
+          <article>
+            <span>01</span>
+            <h3>AI compresses execution.</h3>
+            <p>It writes boilerplate, explores options, and catches patterns faster than a tired team can.</p>
+          </article>
+          <article>
+            <span>02</span>
+            <h3>Humans define the target.</h3>
+            <p>Someone must know which problem is worth solving, who gets hurt, and what success should feel like.</p>
+          </article>
+          <article>
+            <span>03</span>
+            <h3>Trust is still earned by people.</h3>
+            <p>Users do not only buy features. They buy confidence that someone understands their reality.</p>
+          </article>
+          <article>
+            <span>04</span>
+            <h3>The strongest developer is a translator.</h3>
+            <p>Code, product, customers, risk, business, and craft all need a person who can connect them.</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="pledge-section" id="pledge" aria-labelledby="pledge-title">
+        <div class="pledge-copy">
+          <p class="eyebrow">Confidence Pledge</p>
+          <h2 id="pledge-title">You are not competing with the tool. You are becoming harder to replace.</h2>
+          <p>
+            Let AI multiply your hands. Keep training your judgment. The future still needs people
+            who can ask better questions, make responsible calls, and build things that feel humane.
+          </p>
+        </div>
+        <button id="pledge-button" type="button">Generate my reminder</button>
+        <p class="pledge-output" id="pledge-output">
+          Click for a reminder you can keep nearby.
+        </p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
